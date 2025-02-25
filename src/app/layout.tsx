@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Samy - Portfolio",
   description: "Étudiant BTS SIO SLAM",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
 };
 

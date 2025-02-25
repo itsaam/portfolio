@@ -1,9 +1,9 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
+import CVSection from "@/components/cv-section/cv-section";
 import Image from "next/image";
 import { useMemo } from "react";
 import {
@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
+// Add this import at the top of the file
 // Ajouter au début du fichier, après les imports
 // Composant principal de la page d'accueil du portfolio
 
@@ -227,7 +228,7 @@ export default function Home() {
                     : "text-gray-600 hover:text-blue-600"
                 } transition-colors`}
               >
-                Expérience
+                Expériences
               </a>
               <a
                 onClick={() => scrollToSection("projects")}
@@ -351,7 +352,7 @@ export default function Home() {
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   <Image
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fglobal-uploads.webflow.com%2F6335b33630f88833a92915fc%2F63e501246a370e0d4462f2ed_herologo.png&f=1&nofb=1&ipt=b19425d511435f62b32ada2252f13cf6194f991d25315966aad2381b80f854ee&ipo=images"
+                    src="/images/bento-icon.png" // Chemin local de l'icône
                     alt="Bento.me"
                     width={24} // Spécifiez la largeur
                     height={24} // Spécifiez la hauteur
@@ -592,17 +593,9 @@ export default function Home() {
         </section>
         {/* Section CV avec bouton de téléchargement */}
         {/* Avant <section id="cv" */}
-        <section id="cv" className="py-20 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-8 text-gray-800">Mon CV</h2>
-            <p className="text-lg mb-8 text-gray-600">
-              Téléchargez mon CV pour en savoir plus sur mon parcours et mes
-              compétences.
-            </p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Télécharger CV
-            </Button>
-          </div>
+        {/* Replace the existing CV section with the new CVSection component */}
+        <section id="cv" ref={sectionRefs.cv} className="py-20 bg-white">
+          <CVSection />
         </section>
       </main>
 
