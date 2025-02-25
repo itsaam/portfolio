@@ -68,8 +68,8 @@ export default function GIFConverterProject() {
             <ul className="space-y-2 text-gray-600">
               <li>• Python</li>
               <li>• Tkinter (Interface graphique)</li>
-              <li>• Pillow (Traitement d'images)</li>
-              <li>• PyAutoGUI (Capture d'écran)</li>
+              <li>• Pillow (Traitement d&apos;images)</li>{" "}
+              <li>• PyAutoGUI (Capture d&apos;écran)</li>
             </ul>
           </motion.div>
         </div>
@@ -84,11 +84,11 @@ export default function GIFConverterProject() {
             Sécurité et Innovation
           </h2>
           <p className="text-gray-600">
-            Notre système d'accès sécurisé utilise des clés uniques et une
+            Notre système d&apos;accès sécurisé utilise des clés uniques et une
             vérification via webhook, assurant la protection des utilisateurs
-            sans dépendre d'une base de données traditionnelle. Cette approche
-            innovante garantit à la fois la sécurité et la flexibilité de
-            l'application.
+            sans dépendre d&apos;une base de données traditionnelle. Cette
+            approche innovante garantit à la fois la sécurité et la flexibilité
+            de l&apos;application.
           </p>
         </motion.div>
 

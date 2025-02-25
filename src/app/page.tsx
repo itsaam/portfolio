@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
+import Image from "next/image";
+import { useMemo } from "react";
 import {
   ChevronDown,
   Briefcase,
@@ -79,13 +81,24 @@ export default function Home() {
   // État pour suivre la section active
   // Avant const [activeSection, setActiveSection] = useState("home");
   const [activeSection, setActiveSection] = useState("home");
-  const sectionRefs = {
-    home: useRef<HTMLElement>(null),
-    about: useRef<HTMLElement>(null),
-    projects: useRef<HTMLElement>(null),
-    cv: useRef<HTMLElement>(null),
-    experience: useRef<HTMLElement>(null),
-  };
+  // Déclarez les useRef directement dans le composant
+  const homeRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+  const cvRef = useRef<HTMLElement>(null);
+  const experienceRef = useRef<HTMLElement>(null);
+
+  // Utilisez useMemo pour stabiliser l'objet sectionRefs
+  const sectionRefs = useMemo(
+    () => ({
+      home: homeRef,
+      about: aboutRef,
+      projects: projectsRef,
+      cv: cvRef,
+      experience: experienceRef,
+    }),
+    []
+  );
 
   // Effet pour observer les sections visibles et mettre à jour la section active
   // Avant useEffect(() => {
@@ -116,7 +129,7 @@ export default function Home() {
     });
 
     return () => observer.disconnect();
-  }, []); // Removed sectionRefs from the dependency array
+  }, [sectionRefs]); // Ajoutez sectionRefs ici
 
   // Fonction pour faire défiler jusqu'à une section spécifique
   // Avant const scrollToSection = (sectionId: string) => {
@@ -337,9 +350,11 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  <img
+                  <Image
                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fglobal-uploads.webflow.com%2F6335b33630f88833a92915fc%2F63e501246a370e0d4462f2ed_herologo.png&f=1&nofb=1&ipt=b19425d511435f62b32ada2252f13cf6194f991d25315966aad2381b80f854ee&ipo=images"
                     alt="Bento.me"
+                    width={24} // Spécifiez la largeur
+                    height={24} // Spécifiez la hauteur
                     className="w-6 h-6 object-contain"
                   />
                 </a>
@@ -411,10 +426,10 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
               >
                 <p className="text-lg text-gray-800 leading-relaxed mb-6 text-justify">
-                  Passionné par le développement et en constante évolution, je suis un
-                  développeur junior déterminé à perfectionner mes compétences.
-                  Actuellement, je me spécialise en React et HTML pour le
-                  frontend, ainsi qu’en Python et PHP pour le backend.
+                  Passionné par le développement et en constante évolution, je
+                  suis un développeur junior déterminé à perfectionner mes
+                  compétences. Actuellement, je me spécialise en React et HTML
+                  pour le frontend, ainsi qu’en Python et PHP pour le backend.
                 </p>
                 <p className="text-lg text-gray-800 leading-relaxed text-justify">
                   J’ai également de l’expérience avec les bases de données

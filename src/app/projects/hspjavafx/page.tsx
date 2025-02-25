@@ -67,7 +67,7 @@ export default function HSPJavaFXProject() {
               Stack Technologique
             </h2>
             <ul className="space-y-2 text-gray-600">
-              <li>• JavaFX pour l'interface utilisateur</li>
+              <li>• JavaFX pour l&apos;interface utilisateur</li>
               <li>• Java pour la logique métier</li>
               <li>• Base de données SQL</li>
               <li>• WebSocket pour la communication temps réel</li>

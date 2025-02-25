@@ -50,8 +50,8 @@ export default function HSPProject() {
             </h2>
             <ul className="space-y-2 text-gray-600">
               <li>• Messagerie en temps réel</li>
-              <li>• Système d'actualités et d'annonces</li>
-              <li>• Gestion des offres d'emploi</li>
+              <li>• Système d&apos;actualités et d&apos;annonces</li>
+              <li>• Gestion des offres d&apos;emploi</li>
               <li>• Authentification sécurisée avec 2FA</li>
             </ul>
           </motion.div>
@@ -87,7 +87,7 @@ export default function HSPProject() {
             Notre plateforme intègre un système de messagerie en temps réel
             optimisé et sécurisé, avec un focus particulier sur la protection
             des données médicales sensibles. Nous utilisons des technologies de
-            pointe pour garantir la confidentialité et l'intégrité des
+            pointe pour garantir la confidentialité et l&apos;intégrité des
             informations.
           </p>
         </motion.div>
