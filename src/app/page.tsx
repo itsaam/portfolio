@@ -154,10 +154,9 @@ export default function Home() {
       role: "Alternance Technicien Informatique",
       responsibilities: [
         "Configuration et maintenance des postes sous Intune",
-        "Automatisation de tâches avec Python.",
-        "Implementing secure backend systems with Node.js and Express",
-        "Gestion de l’enrôlement et du support pour des appareils iPhone.",
-        "Maintenance des postes informatiques et assistance utilisateurs.",
+        "Automatisation de tâches avec Python",
+        "Gestion de l’enrôlement et du support pour des appareils iPhone",
+        "Maintenance des postes informatiques et assistance utilisateurs",
       ],
     },
     {
@@ -166,9 +165,9 @@ export default function Home() {
       period: "Mai - Juin 2022",
       role: "Stage Développeur & Sécurité",
       responsibilities: [
-        "Développement de scripts d’analyse de vulnérabilités sous Linux (Bash, Python).",
-        "Contribution à l’évaluation des configurations systèmes et à leur renforcement.",
-        "Participation à des initiatives de Pentesting et audits de sécurité applicative.",
+        "Développement de scripts d’analyse de vulnérabilités sous Linux (Bash, Python)",
+        "Contribution à l’évaluation des configurations systèmes et à leur renforcement",
+        "Participation à des initiatives de Pentesting et audits de sécurité applicative",
       ],
     },
     {
@@ -177,8 +176,8 @@ export default function Home() {
       period: "Juin - Juillet 2021",
       role: "Technicien Informatique",
       responsibilities: [
-        "Installation et configuration de serveurs Linux dédiés pour l’hébergement.",
-        "Mise en place d’environnements de test et intégration continue (Vagrant, VirtualBox).",
+        "Installation et configuration de serveurs Linux dédiés pour l’hébergement",
+        "Mise en place d’environnements de test et intégration continue (Vagrant, VirtualBox)",
       ],
     },
     {
@@ -187,7 +186,7 @@ export default function Home() {
       period: "Novembre - Novembre 2019",
       role: "Stage Développeur Web",
       responsibilities: [
-        "Maintenance et amélioration du site web de l’entreprise en HTML5, CSS3, JavaScript, PHP.",
+        "Maintenance et amélioration du site web de l’entreprise en HTML5, CSS3, JavaScript, PHP",
       ],
     },
   ];
